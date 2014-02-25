@@ -1,4 +1,4 @@
-chkconfigwrapper
-================
+chkconfig wrapper
+=================
 
-chkconfig wrapper for a debian-based system
+chkconfig wrapper is a wrapper for the red-hat based ditributions "chkconfig" for debian-based systems.
