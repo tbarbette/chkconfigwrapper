@@ -1,0 +1,2 @@
+install:
+	cp chkconfig /sbin
