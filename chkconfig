@@ -1,1 +1,26 @@
-/sbin/chkconfig
+#!/bin/bash
+
+function usage
+{
+    echo "  --add Add a script"
+    echo "  --del Remove a script"
+
+}
+
+while [ "$1" != "" ]; do
+    case $1 in
+        -a | --add )            shift
+                                update-rc.d $1 defaults
+                                ;;
+        -d | --del )
+                                shift
+                                update-rc.d $1 remove
+                                ;;
+        -h | --help )           usage
+                                exit
+                                ;;
+        * )                     usage
+                                exit 1
+    esac
+    shift
+done
